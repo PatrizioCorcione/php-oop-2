@@ -2,8 +2,8 @@
 
 class Categories
 {
-  protected $name;
-  protected $product = [];
+  public $name;
+  public $product = [];
 
   public function __construct($name)
   {
