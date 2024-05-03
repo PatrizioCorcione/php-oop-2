@@ -2,20 +2,23 @@
 require_once __DIR__ . '/Model/Products.php';
 require_once __DIR__ . '/Model/Categories.php';
 require_once __DIR__ . '/Model/Food.php';
+require_once __DIR__ . '/Model/Toy.php';
+require_once __DIR__ . '/Model/Kennel.php';
 
-$trainer = new Food("Croccantini Trainer", "Cani", 12.12, "fdgdgfdfg", 'dsfsdf', 80.50, 'fragola', 'big');
-$kitty = new Food("Croccantini Kitty", "Gatti", 12.12, "fdgdgfdfg", 'dsfsdf', 80.50, 'fragola', 'big');
-$ciccio = new Food("Croccantini Trainer", "Cani", 12.12, "fdgdgfdfg", 'dsfsdf', 80.50, 'fragola', 'big');
-$pasticcio = new Food("Croccantini Kitty", "Gatti", 12.12, "fdgdgfdfg", 'dsfsdf', 80.50, 'fragola', 'big');
+$trainer = new Food("Croccantini Trainer", "Cani", 12.12, "fdgdgfdfg", 'dsfsdf', 'small', 'fragola', 'kibbles');
+$kitty = new Food("Croccantini Kitty", "Gatti", 12.12, "fdgdgfdfg", 'dsfsdf', 'small', 'fragola', 'kibbles');
+$king = new Toy("Croccantini Kitty", "Gatti", 12.12, "fdgdgfdfg", 'dsfsdf', 'plastica', 'adult', 'rope');
+$kong = new Kennel("Croccantini Kitty", "Gatti", 12.12, "fdgdgfdfg", 'dsfsdf', 80.50, 'wood', 'intern');
 
-$categoriaCani = new Categories("Cani");
-$categoriaGatti = new Categories("Gatti");
-$categoriaCani->addProduct($trainer);
-$categoriaGatti->addProduct($kitty);
-$categoriaCani->addProduct($ciccio);
-$categoriaGatti->addProduct($pasticcio);
-var_dump($categoriaCani);
-var_dump($categoriaGatti);
+$categorieDog = new Categories("Cani");
+$categorieCat = new Categories("Gatti");
+$categorieDog->addProduct($trainer);
+$categorieDog->addProduct($king);
+$categorieCat->addProduct($kitty);
+$categorieDog->addProduct($kong);
+
+var_dump($categorieDog);
+var_dump($categorieCat);
 ?>
 
 
