@@ -13,6 +13,4 @@ class Food extends Products
     $this->taste = $_taste;
     $this->foodtype = $_foodtype;
   }
-  // tipe matirial age 
-  // matirial size tipe 
 }

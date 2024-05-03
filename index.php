@@ -29,7 +29,7 @@ require_once __DIR__ . '/data/db.php';
             <div class="card" style="width: 18rem;">
               <div class="card-body">
                 <h5 class="card-title"><?php echo $productDog->name; ?></h5>
-                <p class="card-text"><?php echo $productDog->type; ?></h5>
+                <p class="card-text">Tipologia: <?php echo $productDog->type; ?></h5>
                 </p>
                 <p class="card-text"><?php echo $productDog->matirial ?? ''; ?></h5>
                 </p>
