@@ -1,0 +1,16 @@
+body{
+  background-image: url(./img/1000_F_343890246_QkF7WvGw1gFqN5dewQgISbqSzu1dcNQt.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+h1{
+  font-family: "Jersey 15", sans-serif;
+  font-size: 5rem;
+  color: black;
+}
+
+.card{
+  background-color: rgb(27, 27, 27);
+  color: rgb(255, 230, 71);
+  height: 200px;
+}
