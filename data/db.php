@@ -4,20 +4,28 @@ require_once __DIR__ . '/../Model/Categories.php';
 require_once __DIR__ . '/../Model/Food.php';
 require_once __DIR__ . '/../Model/Toy.php';
 require_once __DIR__ . '/../Model/Kennel.php';
+require_once __DIR__ . '/../Model/Materials.php';
 
 $categorieDog = new Categories("Cani");
 $categorieCat = new Categories("Gatti");
 
+$kennel_1 = new Kennel("HouseDoggy", "Gatti", 102.99, "Cuccia", 'dsfsdf', 80.55, 'Interni');
+$kennel_1->material = 'Metallo';
+$kennel_2 = new Kennel("Kennel1", "Buddy", 89.99, "Dog House", 'xyz123', 65.75, 'Interni');
+$kennel_2->material = 'Legno';
+$kennel_3 = new Kennel("Kennel2", "Max", 120.50, "Pet Cabin", 'abc456', 95.25, 'Esterni');
+$kennel_3->material = 'Plastica';
+
 $categorieDog->product  = [
+  $kennel_1,
+  $kennel_2,
+  $kennel_3,
   new Food("Croccantini Trainer", "Cani", 12.99, "Cibo", 'dsfsdf', 'Small', 'Manzo', ' Secco'),
   new Food("Délices Croustillants", "Chiens", 15.99, "Cibo", 'dfsdf', 'Large', 'Poisson', 'Umido'),
   new Food("Knusperige Leckerbissen", "Hunde", 8.49, "Cibo", 'sdfsd', 'Medium', 'Huhn', 'Secco'),
   new Toy("Cordazzio", "Cani", 10.99, "Giocattolo", 'dsfsdf', 'Cellulosa', 'Adulto', 'Corda'),
   new Toy("Pallina Squeaky", "Cani", 7.49, "Giocattolo", "Squeaky", "Gomma", "Tutti", "Pallina"),
   new Toy("Tana del Topo", "Gatti", 12.99, "Giocattolo", "Rattling", "Peluche", "Tutti", "Tana"),
-  new Kennel("HouseDoggy", "Gatti", 102.99, "Cuccia", 'dsfsdf', 80.55, 'Legno', 'Interni'),
-  new Kennel("Kennel1", "Buddy", 89.99, "Dog House", 'xyz123', 65.75, 'Plastic', 'Interni'),
-  new Kennel("Kennel2", "Max", 120.50, "Pet Cabin", 'abc456', 95.25, 'Wood', 'Esterni'),
 ];
 
 $categorieCat->product = [

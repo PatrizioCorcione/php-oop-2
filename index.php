@@ -58,7 +58,7 @@ require_once __DIR__ . '/data/db.php';
                   </p>
                   <p class="card-text"><?php echo $productDog->kennelsize ?? ''; ?></h5>
                   </p>
-                  <p class="card-text"><?php echo $productDog->kennelmatirial ?? ''; ?></h5>
+                  <p class="card-text"><?php echo $productDog->material ?? ''; ?></h5>
                   </p>
                   <p class="card-text"><?php echo $productDog->kenneltype ?? ''; ?></h5>
                   </p>
@@ -75,7 +75,8 @@ require_once __DIR__ . '/data/db.php';
       <div class="row row-cols-3 ">
         <?php foreach ($categorieCat->product as $productCat) : ?>
           <div class="col">
-            <div class="card" style="width: 18rem;">
+            <div class="card my-3 ">
+              <img src=" https://www.ilquotidianodellazio.it/wp-content/uploads/2022/06/Croccantini-per-cani-1024x593.jpg" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title"><?php echo $productCat->name; ?></h5>
                 <p class="card-text"><?php echo $productCat->type; ?></h5>
@@ -99,7 +100,7 @@ require_once __DIR__ . '/data/db.php';
                 <p class="card-text"><?php echo $productCat->kenneltype ?? ''; ?></h5>
                 </p>
                 <a href="#" class="btn btn-primary"><?php echo $productCat->get_price(); ?></h5></a>
-                <p class="text-end "><i class="fa-solid fa-cat"></i></p>
+                <p class="text-end m-0"><i class="fa-solid fa-cat"></i></p>
               </div>
             </div>
           </div>
