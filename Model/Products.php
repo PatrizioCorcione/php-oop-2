@@ -12,12 +12,19 @@ class Products
     if ($_name == '') {
       throw new Exception("L' articolo deve avere un nome.");
     }
+    try {
+      if ($_price <= 0) {
+        throw new Exception("Il prezzo non può essere negativo.");
+      }
 
-    $this->name = $_name;
-    $this->categorie = $_categorie;
-    $this->set_price($_price);
-    $this->type = $_type;
-    $this->img = $_img;
+      $this->name = $_name;
+      $this->categorie = $_categorie;
+      $this->set_price($_price);
+      $this->type = $_type;
+      $this->img = $_img;
+    } catch (Exception $err) {
+      echo $err->getMessage();
+    }
   }
   function set_price($_price)
   {
