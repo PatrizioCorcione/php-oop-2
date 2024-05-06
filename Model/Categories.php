@@ -9,9 +9,4 @@ class Categories
   {
     $this->name = $name;
   }
-
-  public function addProduct(Products $product)
-  {
-    $this->product[] = $product;
-  }
 }
