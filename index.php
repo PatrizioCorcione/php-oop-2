@@ -63,7 +63,7 @@ require_once __DIR__ . '/data/db.php';
                   <p class="card-text"><?php echo $productDog->kenneltype ?? ''; ?></h5>
                   </p>
                 </div>
-                <a href="#" class="btn btn-warning"><?php echo $productDog->price . ' €'; ?></h5></a>
+                <a href="#" class="btn btn-warning"><?php echo $productDog->get_price() . ' €'; ?></h5></a>
                 <p class="text-end m-0 "><i class="fa-solid fa-dog"></i></p>
               </div>
             </div>
@@ -98,7 +98,7 @@ require_once __DIR__ . '/data/db.php';
                 </p>
                 <p class="card-text"><?php echo $productCat->kenneltype ?? ''; ?></h5>
                 </p>
-                <a href="#" class="btn btn-primary"><?php echo $productCat->price; ?></h5></a>
+                <a href="#" class="btn btn-primary"><?php echo $productCat->get_price(); ?></h5></a>
                 <p class="text-end "><i class="fa-solid fa-cat"></i></p>
               </div>
             </div>
